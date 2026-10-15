@@ -1,0 +1,263 @@
+* {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background-color: #faf8f3;
+  color: #2a2b28;
+  line-height: 1.7;
+}
+
+a {
+  text-decoration: none;
+  color: #2a2b28;
+}
+
+img {
+  max-width: 100%;
+  display: block;
+}
+
+h2,
+h3 {
+  margin: 0 0 0.5em 0;
+}
+
+.section {
+  padding: 56px 0;
+  border-bottom: 1px solid #dedacb;
+}
+
+.wrap {
+  max-width: 1040px;
+  display: flex;
+  justify-content: center;
+  padding: 24px;
+  margin: auto;
+}
+
+.section-head {
+  margin-bottom: 28px;
+}
+
+.section h2 {
+  font-size: 1.6rem;
+  color: #232d5c;
+}
+
+.site-header {
+  position: sticky;
+  top: 0px;
+  z-index: 50;
+  background-color: rgba(250, 248, 243, 0.92);
+  border-bottom: 1px solid #dedacb;
+}
+
+.header-inner {
+  max-width: 1040px;
+  display: flex;
+  text-align: center;
+  justify-content: space-between;
+  padding: 16px 24px;
+  align-items: center;
+  /* 水平分布、文字置中不一樣　*/
+}
+
+.logo {
+  font-weight: 700px;
+  font-size: 1.3rem;
+  color: #232d5c;
+  display: flex;
+  align-items: baseline;
+  /* 圓點與文字的間距？ */
+}
+
+.logo-mark {
+  width: 10px;
+  height: 10px;
+  background-color: #c1443c;
+  border-radius: 999px;
+  margin-right: 8px;
+}
+
+.main-nav ul {
+  display: flex;
+  justify-content: space-between;
+  gap: 2px;
+}
+
+.main-nav a {
+  display: flex;
+  padding: 8px 16px;
+  font-size: 0.92rem;
+  font-weight: 500;
+  color: #767065;
+  position: relative;
+}
+
+.main-nav a:hover {
+  color: #2a2b28;
+}
+
+li a::after {
+  content: "";
+  position: absolute;
+  height: 2px;
+  background-color: #c1443c;
+  left: 16px;
+  right: 16px;
+  bottom: 4px;
+}
+
+.task-list {
+  background-color: #fff;
+  border: 1px solid #dedacb;
+}
+
+.task-item {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  padding: 14px 18px;
+}
+/* 最後一項不要用下框線？ */
+
+.task-item input[type="checkbox"] {
+  width: 18px;
+  height: 18px;
+  accent-color: #5f7f5a;
+}
+
+.task-item label {
+  flex: 1;
+  /* 詢問老師這什麼意思 */
+  font-size: 15.2px;
+}
+
+.task-item input[type="checkbox"]:checked + label {
+  color: #767076;
+  text-decoration: line-through;
+}
+
+.tag {
+  font-size: 0.72rem;
+  font-weight: 700;
+  padding: 3px 10px;
+  border-radius: 100px;
+  white-space: nowrap;
+  /* 不換行 */
+}
+
+.tag-high {
+  background-color: #fbe7e4;
+  color: #c1443c;
+}
+
+.tag-mid {
+  background-color: #f6e9d2;
+  color: #c98a2a;
+}
+.tag-low {
+  background-color: #e4ebe1;
+  color: #5f7f5a;
+}
+
+.add-task {
+  display: flex;
+  gap: 10px;
+  margin-top: 16px;
+}
+
+.add-task input[type="text"] {
+  flex: 1;
+}
+
+.add-task input,
+.add-task button {
+  font-size: 0.9rem;
+  padding: 10px 14px;
+  border: 1px solid #dedacb;
+  border-radius: 4px;
+  background-color: #fff;
+}
+
+.add-task button {
+  background-color: #33417c;
+  color: #fff;
+  border-color: #33417c;
+  font-weight: 700;
+
+  cursor: pointer;
+  /* 按鈕滑鼠游標修改成手指 */
+}
+
+.add-task button:hover {
+  background-color: #232d5c;
+}
+
+.card-list {
+  display: flex;
+  flex-wrap: wrap;
+  /* 放不下時自動換行 */
+  gap: 20px;
+}
+
+.diary-card {
+  flex: 1 1 230px;
+  background-color: #fff;
+  border: 1px solid #dedacb;
+  overflow: hidden;
+  /* 超出的部分隱藏 */
+}
+
+.diary-card .thumb {
+  width: 100%;
+  height: 140px;
+  border-bottom: 1px solid #dedacb;
+}
+
+.diary-card .card-body {
+  padding: 16px 18px 20px;
+}
+
+.diary-card .date {
+  font-size: 0.72rem;
+  color: #c1443c;
+  font-weight: 700;
+  letter-spacing: 0.05em;
+}
+
+.diary-card h3 {
+  font-size: 1.05rem;
+  margin: 6px 0 8px;
+}
+
+.diary-card p {
+  font-size: 0.85rem;
+  color: #767075;
+  margin: 0;
+}
+
+.back-to-top {
+  position: fixed;
+  right: 26px;
+  bottom: 26px;
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  background-color: #33417c;
+  color: #fff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-weight: 1.1rem;
+  z-index: 60;
+}
+
+.back-to-top:hover {
+  background-color: #c1443c;
+}
