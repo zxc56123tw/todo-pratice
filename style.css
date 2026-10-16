@@ -34,8 +34,8 @@ h3 {
 
 .wrap {
   max-width: 1040px;
-  display: flex;
-  justify-content: center;
+  /* display: flex; */
+  /* justify-content: center; */
   padding: 24px;
   margin: auto;
 }
@@ -65,6 +65,8 @@ h3 {
   padding: 16px 24px;
   align-items: center;
   /* 水平分布、文字置中不一樣　*/
+  margin: 0 auto;
+  /* 先上下->再左右，這個是元素在容器中的置中 */
 }
 
 .logo {
